@@ -9,7 +9,7 @@ const Home = ({ data }) => {
   const [searching, setsearching] = useState(''); 
 
   useEffect(() => {
-    setsorting([...data]); 
+    setsorting([...data]); //
     setresetSort([...data]); 
   }, [data]);
 
@@ -25,8 +25,10 @@ const Home = ({ data }) => {
   };
 
   const resetData = () => {
-    setsorting([...resetSort]);
-    setsearching('');
+    setsorting([...resetSort]); //reset the sorting state with the original data
+
+    setsearching(''); //clear search
+
   };
 
   return (
